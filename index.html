@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypergeometric Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Star Wars Unlimited Hypergeometric Probability Calculator</h1>
+        <p class="subtitle">Calculate the odds of drawing specific cards from your deck</p>
+
+        <section class="inputs">
+            <h2>Inputs</h2>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="deckSize">Deck Size</label>
+                    <input type="number" id="deckSize" value="50" min="1">
+                    <span class="hint">Cards remaining in deck at turn <span id="turnDisplay">0</span>: <span id="remainingDeck">50</span></span>
+
+                </div>
+                <div class="input-group">
+                    <label for="turn">Turn #</label>
+                    <input type="number" id="turn" value="0" min="0">
+                    <span class="hint">Cards already drawn</span>
+                </div>
+                <div class="input-group">
+                    <label for="sampleSize">Cards Being Sampled</label>
+                    <input type="number" id="sampleSize" value="6" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="targets">Number of Targets</label>
+                    <input type="number" id="targets" value="3" min="0">
+                    <span class="hint">Success cards in deck</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="outputs">
+            <h2>Results</h2>
+            <div class="results-grid">
+                <div class="result-row">
+                    <span class="result-label">P(0)</span>
+                    <span class="result-value" id="pWhiff">-</span>
+                    <span class="hint">The probability you whiffed your target</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">P(Exactly 1, no duplicates)</span>
+                    <span class="result-value" id="pExactlyOne">-</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">P(At least 1)</span>
+                    <span class="result-value" id="pAtLeastOne">-</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">P(2 or more)</span>
+                    <span class="result-value" id="pTwoOrMore">-</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">P(whiff twice)</span>
+                    <span class="result-value" id="pWhiffTwice">-</span>
+                    <span class="hint">The probability of missing your target twice in a row</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="distribution">
+            <h2>Distribution</h2>
+            <div class="chart-container">
+                <div class="chart" id="chart"></div>
+                <div class="chart-labels" id="chartLabels"></div>
+            </div>
+        </section>
+
+        <div id="error" class="error"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
