@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php include '../navbar.php'; ?>
     <div class="container">
         <h1>Star Wars Unlimited Hypergeometric Probability Calculator</h1>
         <p class="subtitle">Calculate the odds of drawing specific cards from your deck</p>
