@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWU Hypergeometric Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/deck-helper/style.css">
 </head>
 <body>
     <?php include '../navbar.php'; ?>
@@ -79,6 +79,6 @@
     <footer>
         <p>Developed by bluepawn, for the swu gamers</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="/deck-helper/script.js"></script>
 </body>
 </html>
