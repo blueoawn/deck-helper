@@ -7,7 +7,15 @@
     <link rel="stylesheet" href="/deck-helper/style.css">
 </head>
 <body>
-    <?php include '../navbar.php'; ?>
+    <script>
+        // Load the shared static navbar (the PHP include it replaces is retired).
+        if (!document.getElementById("navbar")) {
+            fetch("/navbar.html")
+                .then((r) => r.text())
+                .then((html) => document.body.insertAdjacentHTML("afterbegin", html))
+                .catch((err) => console.error("Failed to load navbar:", err));
+        }
+    </script>
     <div class="container">
         <h1>Star Wars Unlimited Hypergeometric Probability Calculator</h1>
         <p class="subtitle">Calculate the odds of drawing specific cards from your deck</p>
